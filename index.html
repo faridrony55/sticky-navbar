@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- this goes inside the header tag-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link href="animate.min.css" rel="stylesheet" type="text/css">
+<!-- all these references goes before the closing body tag-->
+</head>
+<body>
+
+<!-- <div class="header">
+     <nav id="nav">
+             <ul class="nav navbar-nav">
+                     <li>
+                         <a href="#home">Home</a>
+                     </li>
+                     <li>
+                         <a href="#about">About</a>
+                     </li>
+                     <li>
+                         <a href="#services">Services</a>
+                     </li>
+                     <li>
+                         <a href="#contact">Contact</a>
+                     </li>
+             </ul>
+     </nav>
+</div> -->
+<nav id="header" class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#services">services</a></li> 
+            <li><a href="#contact">contact</a></li>
+
+      </ul>
+       
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+
+
+<div id="home" class="scrollto">
+        <!-- Your content goes here -->
+</div>
+<div id="about" class="scrollto">
+        <!-- Your content goes here -->
+</div>
+<div id="services" class="scrollto">
+        <!-- Your content goes here -->
+</div>
+<div id="contact" class="scrollto">
+        <!-- Your content goes here -->
+</div>
+
+
+
+
+
+
+<style type="text/css">
+.navbar {
+    min-height: auto;
+    margin-bottom: 0;
+    background-color: #9E9E9E;
+    border-color: transparent;
+  }
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none; 
+
+}
+.scrollto{
+	height: 100vh;
+}
+ #home{ 
+    background: #6e43c1;
+ }
+ #about,#contact{
+    background: #c14389;
+
+ }
+ #services{ 
+    background: #2e97af;
+ }
+#contact{
+    background: #a95a52;
+
+ }
+#header{
+	width: 100%
+}
+.active {
+    background: #006699 !important;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    color: #fff;
+}
+
+</style>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script> -->
+    <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.stickyNavbar.min.js"></script>
+
+
+<script type="text/javascript">
+	$(function () {
+    $('#header').stickyNavbar({
+        activeClass: "active", // Class to be added to highlight nav elements
+        sectionSelector: "scrollto", // Class of the section that is interconnected with nav links
+        animDuration: 350, // Duration of jQuery animation as well as jQuery scrolling duration
+        startAt: 0, // Stick the menu at XXXpx from the top of the this() (nav container)
+        easing: "swing", // Easing type if jqueryEffects = true, use jQuery Easing plugin to extend easing types - gsgd.co.uk/sandbox/jquery/easing
+        animateCSS: true, // AnimateCSS effect on/off
+        animateCSSRepeat: false, // Repeat animation everytime user scrolls
+        cssAnimation: "fadeInDown", // AnimateCSS class that will be added to selector
+        jqueryEffects: false, // jQuery animation on/off
+        jqueryAnim: "fadeIn", // jQuery animation type: fadeIn, show or slideDown
+        selector: "a", // Selector to which activeClass will be added, either "a" or "li"
+        mobile: false, // If false, nav will not stick under viewport width of 480px (default) or user defined mobileWidth
+        mobileWidth: 480, // The viewport width (without scrollbar) under which stickyNavbar will not be applied (due user usability on mobile)
+        zindex: 9999, // The zindex value to apply to the element: default 9999, other option is "auto"
+        stickyModeClass: "sticky", // Class that will be applied to 'this' in sticky mode
+        unstickyModeClass: "unsticky" // Class that will be applied to 'this' in non-sticky mode
+    });
+});
+</script>
+</body>
+</html>
